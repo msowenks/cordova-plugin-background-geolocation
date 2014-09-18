@@ -15,13 +15,23 @@ The plugin creates the object `window.plugins.backgroundGeoLocation` with the me
   `start(success, fail)`
 
   `stop(success, fail)`. 
+  
 
 ## Installing the plugin ##
 
 ```
 
    cordova plugin add https://github.com/christocracy/cordova-plugin-background-geolocation.git
+   
 ```
+
+  ## using with build.phonegap.com ##
+  Simply be sure to include your .js file in your www build folder for build.phonegap.com and be sure to reference that file in your index.html file. It will not work if adding the .js file to your web portion of the app!
+  
+  Include the following in your config.xml file
+  
+  <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.3.2" />
+You can also omit the version tag to always use the most recent version of this plugin. Note that this will result in your app being automatically updated with new versions of this plugin as they are released, and may result in unexpected behaviour.
 
 A full example could be:
 ```
